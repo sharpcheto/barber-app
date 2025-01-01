@@ -1,0 +1,7 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "server/src/BarberApp/Dockerfile"
+
+[deploy]
+startCommand = "./BA.Application"
+restartPolicyType = "always"

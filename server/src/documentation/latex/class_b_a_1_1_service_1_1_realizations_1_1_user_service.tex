@@ -1,0 +1,125 @@
+\doxysection{BA.\+Service.\+Realizations.\+User\+Service Class Reference}
+\hypertarget{class_b_a_1_1_service_1_1_realizations_1_1_user_service}{}\label{class_b_a_1_1_service_1_1_realizations_1_1_user_service}\index{BA.Service.Realizations.UserService@{BA.Service.Realizations.UserService}}
+
+
+Represents the service for managing users, implementing IUser\+Service.  
+
+
+Inheritance diagram for BA.\+Service.\+Realizations.\+User\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_a_1_1_service_1_1_realizations_1_1_user_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_a_1_1_service_1_1_realizations_1_1_user_service_abb7ef8d8939f5022f9bae984d5f1af1b}{User\+Service}} (User\+Manager$<$ \mbox{\hyperlink{class_b_a_1_1_data_1_1_models_1_1_user}{User}} $>$ user\+Manager, IMapper mapper)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the User\+Service class. \end{DoxyCompactList}\item 
+async Task$<$ bool $>$ \mbox{\hyperlink{class_b_a_1_1_service_1_1_realizations_1_1_user_service_ac57f98bd48a80041824e25f68ac7511e}{Update\+User\+Async}} (string user\+Email, \mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_user_1_1_user_u_m}{User\+UM}} new\+User\+Info)
+\begin{DoxyCompactList}\small\item\em Updates the information of a user identified by their email.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Email} & The email of the user to update.\\
+\hline
+{\em new\+User\+Info} & The updated user information.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result indicates whether the update was successful.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_user_1_1_user_v_m}{User\+VM}} $>$ \mbox{\hyperlink{class_b_a_1_1_service_1_1_realizations_1_1_user_service_a82629b46795cb6937e78cac69fa7df73}{Get\+User\+By\+Id\+Async}} (string user\+Id)
+\begin{DoxyCompactList}\small\item\em Retrieves user information by their unique identifier.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & The unique identifier of the user.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result contains the user view model.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the service for managing users, implementing IUser\+Service. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_b_a_1_1_service_1_1_realizations_1_1_user_service_abb7ef8d8939f5022f9bae984d5f1af1b}\label{class_b_a_1_1_service_1_1_realizations_1_1_user_service_abb7ef8d8939f5022f9bae984d5f1af1b} 
+\index{BA.Service.Realizations.UserService@{BA.Service.Realizations.UserService}!UserService@{UserService}}
+\index{UserService@{UserService}!BA.Service.Realizations.UserService@{BA.Service.Realizations.UserService}}
+\doxysubsubsection{\texorpdfstring{UserService()}{UserService()}}
+{\footnotesize\ttfamily BA.\+Service.\+Realizations.\+User\+Service.\+User\+Service (\begin{DoxyParamCaption}\item[{User\+Manager$<$ \mbox{\hyperlink{class_b_a_1_1_data_1_1_models_1_1_user}{User}} $>$}]{user\+Manager,  }\item[{IMapper}]{mapper }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the User\+Service class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Manager} & The user manager for handling user operations.\\
+\hline
+{\em mapper} & The Auto\+Mapper instance for mapping objects.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_a_1_1_service_1_1_realizations_1_1_user_service_a82629b46795cb6937e78cac69fa7df73}\label{class_b_a_1_1_service_1_1_realizations_1_1_user_service_a82629b46795cb6937e78cac69fa7df73} 
+\index{BA.Service.Realizations.UserService@{BA.Service.Realizations.UserService}!GetUserByIdAsync@{GetUserByIdAsync}}
+\index{GetUserByIdAsync@{GetUserByIdAsync}!BA.Service.Realizations.UserService@{BA.Service.Realizations.UserService}}
+\doxysubsubsection{\texorpdfstring{GetUserByIdAsync()}{GetUserByIdAsync()}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_user_1_1_user_v_m}{User\+VM}} $>$ BA.\+Service.\+Realizations.\+User\+Service.\+Get\+User\+By\+Id\+Async (\begin{DoxyParamCaption}\item[{string}]{user\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves user information by their unique identifier.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & The unique identifier of the user.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result contains the user view model.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_b_a_1_1_service_1_1_abstractions_1_1_i_user_service_ab262d77123f83ebcb015bd63ea430f8e}{BA.\+Service.\+Abstractions.\+IUser\+Service}}.
+
+\Hypertarget{class_b_a_1_1_service_1_1_realizations_1_1_user_service_ac57f98bd48a80041824e25f68ac7511e}\label{class_b_a_1_1_service_1_1_realizations_1_1_user_service_ac57f98bd48a80041824e25f68ac7511e} 
+\index{BA.Service.Realizations.UserService@{BA.Service.Realizations.UserService}!UpdateUserAsync@{UpdateUserAsync}}
+\index{UpdateUserAsync@{UpdateUserAsync}!BA.Service.Realizations.UserService@{BA.Service.Realizations.UserService}}
+\doxysubsubsection{\texorpdfstring{UpdateUserAsync()}{UpdateUserAsync()}}
+{\footnotesize\ttfamily async Task$<$ bool $>$ BA.\+Service.\+Realizations.\+User\+Service.\+Update\+User\+Async (\begin{DoxyParamCaption}\item[{string}]{user\+Email,  }\item[{\mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_user_1_1_user_u_m}{User\+UM}}}]{new\+User\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the information of a user identified by their email.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Email} & The email of the user to update.\\
+\hline
+{\em new\+User\+Info} & The updated user information.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result indicates whether the update was successful.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_b_a_1_1_service_1_1_abstractions_1_1_i_user_service_a00e43c043ed697c3d1efec917c571a5d}{BA.\+Service.\+Abstractions.\+IUser\+Service}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Barber\+App/\+BA.\+Service/\+Realizations/User\+Service.\+cs\end{DoxyCompactItemize}

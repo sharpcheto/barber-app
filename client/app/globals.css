@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --bordo: #AD3520;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --bordo: #AD3520;
+  }
+}
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  transform: scaleX(0);
+  width: 100%;
+  height: 3px;
+  background-color:#AD3520;
+  transition: transform 0.5s cubic-bezier(.215,.61,.355,0.4);
+  transform-origin: right;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+body {
+  color: var(--foreground);
+  background: #FAF5F1;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Cabinet';
+  src: url(../app/fonts/CabinetGrotesk.ttf);
+  font-weight: 700px;
+  font-size: 160px;
+}
+
+.font-cabinet {
+  font-family: 'Cabinet';
+}
+
+.logo::before{
+  content: 'Barbers';
+  position: absolute;
+  width: 100%;
+  left: -75px;
+  top: 12px;
+  height: 3px;
+  color:#AD3520;
+  font-family: 'Cabinet';
+  font-size: large;
+  font-weight: bold;
+}
+.logo::after{
+  content: 'Bulgaria';
+  position: absolute;
+  left: 60px;
+  top: 12px;
+  width: 100%;
+  height: 3px;
+  color:#AD3520;
+  font-family: 'Cabinet';
+  font-size: large;
+  font-weight: bold;
+}
+
+/* Styling the hidden checkbox through its label */
+.custom-checkbox {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #AD3520;
+  border-radius: 4px;
+  display: inline-block;
+  background-color: white;
+}
+
+.custom-checkbox::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  transition: background-color 0.5s ease, mask 0.5s ease;}
+/* Add the red checkmark only when checked, avoid background transition */
+input[type="checkbox"]:checked + .custom-checkbox {
+  background-color: #AD3520; /* Background change only on the main box, not via transition */
+}
+
+input[type="checkbox"]:checked + .custom-checkbox::after {
+  background-color: white; /* Mask stays stable */
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 24 24"><path d="M20.285 4.715c-.39-.391-1.023-.391-1.414 0l-10.286 10.285-3.57-3.571c-.39-.391-1.023-.391-1.414 0-.391.39-.391 1.023 0 1.414l4.285 4.285c.391.39 1.023.39 1.414 0l11-11c.391-.391.391-1.024 0-1.414z"></path></svg>') no-repeat center;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 24 24"><path d="M20.285 4.715c-.39-.391-1.023-.391-1.414 0l-10.286 10.285-3.57-3.571c-.39-.391-1.023-.391-1.414 0-.391.39-.391 1.023 0 1.414l4.285 4.285c.391.39 1.023.39 1.414 0l11-11c.391-.391.391-1.024 0-1.414z"></path></svg>') no-repeat center;
+}
+
+/* Ensure no background transition when unchecked */
+input[type="checkbox"]:not(:checked) + .custom-checkbox {
+  background-color: white; /* Keeps it clean when unchecked */
+}
+
+.service-item:hover {
+  border-color: #AD3520;
+}
+
+.appoint::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 0;
+  background-color:#FAF5F1;
+  left: 0;
+}
+
+.appoint{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

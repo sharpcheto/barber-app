@@ -1,0 +1,86 @@
+\doxysection{BA.\+Application.\+Controllers.\+User\+Controller Class Reference}
+\hypertarget{class_b_a_1_1_application_1_1_controllers_1_1_user_controller}{}\label{class_b_a_1_1_application_1_1_controllers_1_1_user_controller}\index{BA.Application.Controllers.UserController@{BA.Application.Controllers.UserController}}
+
+
+API Controller for managing user information.  
+
+
+Inheritance diagram for BA.\+Application.\+Controllers.\+User\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_a_1_1_application_1_1_controllers_1_1_user_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_a_1_1_application_1_1_controllers_1_1_user_controller_aedd02d45a8c036dd1602994b436729fe}{User\+Controller}} (\mbox{\hyperlink{interface_b_a_1_1_service_1_1_abstractions_1_1_i_user_service}{IUser\+Service}} user\+Service, \mbox{\hyperlink{interface_b_a_1_1_service_1_1_abstractions_1_1_i_current_user}{ICurrent\+User}} current\+User)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the User\+Controller class. \end{DoxyCompactList}\item 
+async Task$<$ Action\+Result$<$ bool $>$ $>$ \mbox{\hyperlink{class_b_a_1_1_application_1_1_controllers_1_1_user_controller_ae764137b58017dd34f8c7ef61f687c25}{Create\+User\+Info\+Async}} (string user\+Email, \mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_user_1_1_user_u_m}{User\+UM}} user\+Um)
+\begin{DoxyCompactList}\small\item\em Updates user information for a specific user. \end{DoxyCompactList}\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_user_1_1_user_v_m}{User\+VM}}?$>$ $>$ \mbox{\hyperlink{class_b_a_1_1_application_1_1_controllers_1_1_user_controller_aa31814c58f4b46f98f0b2ae8e7533982}{Get\+User\+Me\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves information about the currently authenticated user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+API Controller for managing user information. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_b_a_1_1_application_1_1_controllers_1_1_user_controller_aedd02d45a8c036dd1602994b436729fe}\label{class_b_a_1_1_application_1_1_controllers_1_1_user_controller_aedd02d45a8c036dd1602994b436729fe} 
+\index{BA.Application.Controllers.UserController@{BA.Application.Controllers.UserController}!UserController@{UserController}}
+\index{UserController@{UserController}!BA.Application.Controllers.UserController@{BA.Application.Controllers.UserController}}
+\doxysubsubsection{\texorpdfstring{UserController()}{UserController()}}
+{\footnotesize\ttfamily BA.\+Application.\+Controllers.\+User\+Controller.\+User\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_b_a_1_1_service_1_1_abstractions_1_1_i_user_service}{IUser\+Service}}}]{user\+Service,  }\item[{\mbox{\hyperlink{interface_b_a_1_1_service_1_1_abstractions_1_1_i_current_user}{ICurrent\+User}}}]{current\+User }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the User\+Controller class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Service} & The service handling user-\/related operations.\\
+\hline
+{\em current\+User} & The current user context.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_a_1_1_application_1_1_controllers_1_1_user_controller_ae764137b58017dd34f8c7ef61f687c25}\label{class_b_a_1_1_application_1_1_controllers_1_1_user_controller_ae764137b58017dd34f8c7ef61f687c25} 
+\index{BA.Application.Controllers.UserController@{BA.Application.Controllers.UserController}!CreateUserInfoAsync@{CreateUserInfoAsync}}
+\index{CreateUserInfoAsync@{CreateUserInfoAsync}!BA.Application.Controllers.UserController@{BA.Application.Controllers.UserController}}
+\doxysubsubsection{\texorpdfstring{CreateUserInfoAsync()}{CreateUserInfoAsync()}}
+{\footnotesize\ttfamily async Task$<$ Action\+Result$<$ bool $>$ $>$ BA.\+Application.\+Controllers.\+User\+Controller.\+Create\+User\+Info\+Async (\begin{DoxyParamCaption}\item[{string}]{user\+Email,  }\item[{\mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_user_1_1_user_u_m}{User\+UM}}}]{user\+Um }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates user information for a specific user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Email} & The email of the user to update.\\
+\hline
+{\em user\+Um} & The user update model containing updated information.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating the success of the operation.
+\end{DoxyReturn}
+\Hypertarget{class_b_a_1_1_application_1_1_controllers_1_1_user_controller_aa31814c58f4b46f98f0b2ae8e7533982}\label{class_b_a_1_1_application_1_1_controllers_1_1_user_controller_aa31814c58f4b46f98f0b2ae8e7533982} 
+\index{BA.Application.Controllers.UserController@{BA.Application.Controllers.UserController}!GetUserMeAsync@{GetUserMeAsync}}
+\index{GetUserMeAsync@{GetUserMeAsync}!BA.Application.Controllers.UserController@{BA.Application.Controllers.UserController}}
+\doxysubsubsection{\texorpdfstring{GetUserMeAsync()}{GetUserMeAsync()}}
+{\footnotesize\ttfamily async Task$<$ Action\+Result$<$ \mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_user_1_1_user_v_m}{User\+VM}}?$>$ $>$ BA.\+Application.\+Controllers.\+User\+Controller.\+Get\+User\+Me\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves information about the currently authenticated user. 
+
+\begin{DoxyReturn}{Returns}
+The view model of the current user or a 404 response if the user is not found.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Barber\+App/\+BA.\+Application/\+Controllers/User\+Controller.\+cs\end{DoxyCompactItemize}

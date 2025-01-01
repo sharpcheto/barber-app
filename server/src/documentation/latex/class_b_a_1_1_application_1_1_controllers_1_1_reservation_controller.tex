@@ -1,0 +1,84 @@
+\doxysection{BA.\+Application.\+Controllers.\+Reservation\+Controller Class Reference}
+\hypertarget{class_b_a_1_1_application_1_1_controllers_1_1_reservation_controller}{}\label{class_b_a_1_1_application_1_1_controllers_1_1_reservation_controller}\index{BA.Application.Controllers.ReservationController@{BA.Application.Controllers.ReservationController}}
+
+
+API Controller for managing reservations.  
+
+
+Inheritance diagram for BA.\+Application.\+Controllers.\+Reservation\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_a_1_1_application_1_1_controllers_1_1_reservation_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_a_1_1_application_1_1_controllers_1_1_reservation_controller_ac4d8274cfa5f8157165a212a6979d6d5}{Reservation\+Controller}} (\mbox{\hyperlink{interface_b_a_1_1_service_1_1_abstractions_1_1_i_reservation_service}{IReservation\+Service}} reservation\+Service, \mbox{\hyperlink{interface_b_a_1_1_service_1_1_abstractions_1_1_i_current_user}{ICurrent\+User}} current\+User)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the Reservation\+Controller class. \end{DoxyCompactList}\item 
+async Task$<$ Action\+Result$<$ IEnumerable$<$ \mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_reservation_1_1_reservation_v_m}{Reservation\+VM}} $>$ $>$ $>$ \mbox{\hyperlink{class_b_a_1_1_application_1_1_controllers_1_1_reservation_controller_ab3c6a5fa30cc89960e499868163cd8d7}{Get\+All\+Reservations\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all reservations for the current user. \end{DoxyCompactList}\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_reservation_1_1_reservation_v_m}{Reservation\+VM}}?$>$ $>$ \mbox{\hyperlink{class_b_a_1_1_application_1_1_controllers_1_1_reservation_controller_a84e36f267af8aaf5e2139c6d485e7f81}{Create\+Reservation\+Async}} (\mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_reservation_1_1_reservation_i_m}{Reservation\+IM}} reservation\+Im)
+\begin{DoxyCompactList}\small\item\em Creates a new reservation for the current user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+API Controller for managing reservations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_b_a_1_1_application_1_1_controllers_1_1_reservation_controller_ac4d8274cfa5f8157165a212a6979d6d5}\label{class_b_a_1_1_application_1_1_controllers_1_1_reservation_controller_ac4d8274cfa5f8157165a212a6979d6d5} 
+\index{BA.Application.Controllers.ReservationController@{BA.Application.Controllers.ReservationController}!ReservationController@{ReservationController}}
+\index{ReservationController@{ReservationController}!BA.Application.Controllers.ReservationController@{BA.Application.Controllers.ReservationController}}
+\doxysubsubsection{\texorpdfstring{ReservationController()}{ReservationController()}}
+{\footnotesize\ttfamily BA.\+Application.\+Controllers.\+Reservation\+Controller.\+Reservation\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_b_a_1_1_service_1_1_abstractions_1_1_i_reservation_service}{IReservation\+Service}}}]{reservation\+Service,  }\item[{\mbox{\hyperlink{interface_b_a_1_1_service_1_1_abstractions_1_1_i_current_user}{ICurrent\+User}}}]{current\+User }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the Reservation\+Controller class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reservation\+Service} & The service handling reservation operations.\\
+\hline
+{\em current\+User} & The current user context.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_a_1_1_application_1_1_controllers_1_1_reservation_controller_a84e36f267af8aaf5e2139c6d485e7f81}\label{class_b_a_1_1_application_1_1_controllers_1_1_reservation_controller_a84e36f267af8aaf5e2139c6d485e7f81} 
+\index{BA.Application.Controllers.ReservationController@{BA.Application.Controllers.ReservationController}!CreateReservationAsync@{CreateReservationAsync}}
+\index{CreateReservationAsync@{CreateReservationAsync}!BA.Application.Controllers.ReservationController@{BA.Application.Controllers.ReservationController}}
+\doxysubsubsection{\texorpdfstring{CreateReservationAsync()}{CreateReservationAsync()}}
+{\footnotesize\ttfamily async Task$<$ Action\+Result$<$ \mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_reservation_1_1_reservation_v_m}{Reservation\+VM}}?$>$ $>$ BA.\+Application.\+Controllers.\+Reservation\+Controller.\+Create\+Reservation\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_reservation_1_1_reservation_i_m}{Reservation\+IM}}}]{reservation\+Im }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new reservation for the current user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reservation\+Im} & The reservation input model.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created reservation view model or null if creation fails.
+\end{DoxyReturn}
+\Hypertarget{class_b_a_1_1_application_1_1_controllers_1_1_reservation_controller_ab3c6a5fa30cc89960e499868163cd8d7}\label{class_b_a_1_1_application_1_1_controllers_1_1_reservation_controller_ab3c6a5fa30cc89960e499868163cd8d7} 
+\index{BA.Application.Controllers.ReservationController@{BA.Application.Controllers.ReservationController}!GetAllReservationsAsync@{GetAllReservationsAsync}}
+\index{GetAllReservationsAsync@{GetAllReservationsAsync}!BA.Application.Controllers.ReservationController@{BA.Application.Controllers.ReservationController}}
+\doxysubsubsection{\texorpdfstring{GetAllReservationsAsync()}{GetAllReservationsAsync()}}
+{\footnotesize\ttfamily async Task$<$ Action\+Result$<$ IEnumerable$<$ \mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_reservation_1_1_reservation_v_m}{Reservation\+VM}} $>$ $>$ $>$ BA.\+Application.\+Controllers.\+Reservation\+Controller.\+Get\+All\+Reservations\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves all reservations for the current user. 
+
+\begin{DoxyReturn}{Returns}
+A list of reservations belonging to the current user.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Barber\+App/\+BA.\+Application/\+Controllers/Reservation\+Controller.\+cs\end{DoxyCompactItemize}

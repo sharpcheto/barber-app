@@ -1,0 +1,127 @@
+\doxysection{BA.\+Service.\+Realizations.\+Reservation\+Service Class Reference}
+\hypertarget{class_b_a_1_1_service_1_1_realizations_1_1_reservation_service}{}\label{class_b_a_1_1_service_1_1_realizations_1_1_reservation_service}\index{BA.Service.Realizations.ReservationService@{BA.Service.Realizations.ReservationService}}
+
+
+Represents the service for managing reservations, implementing IReservation\+Service.  
+
+
+Inheritance diagram for BA.\+Service.\+Realizations.\+Reservation\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_a_1_1_service_1_1_realizations_1_1_reservation_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_a_1_1_service_1_1_realizations_1_1_reservation_service_aaeaf9b1d0332d47abb51df4851f2eeaa}{Reservation\+Service}} (\mbox{\hyperlink{class_b_a_1_1_data_1_1_data_1_1_application_db_context}{Application\+Db\+Context}} context, User\+Manager$<$ \mbox{\hyperlink{class_b_a_1_1_data_1_1_models_1_1_user}{User}} $>$ user\+Manager, IMapper mapper)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the Reservation\+Service class. \end{DoxyCompactList}\item 
+async Task$<$ IEnumerable$<$ \mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_reservation_1_1_reservation_v_m}{Reservation\+VM}} $>$ $>$ \mbox{\hyperlink{class_b_a_1_1_service_1_1_realizations_1_1_reservation_service_a5d43f782215f1fe413291d8c1b72d5ae}{Get\+All\+Reservations\+Async}} (string user\+Id)
+\begin{DoxyCompactList}\small\item\em Retrieves all reservations for a specific user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & The unique identifier of the user.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result contains a collection of reservation view models.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_reservation_1_1_reservation_v_m}{Reservation\+VM}} $>$ \mbox{\hyperlink{class_b_a_1_1_service_1_1_realizations_1_1_reservation_service_ac95c1e1d3a5ac3fc4d8fdbc075bb35ee}{Create\+Reservation\+Async}} (\mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_reservation_1_1_reservation_i_m}{Reservation\+IM}} reservation\+Im, string user\+Id)
+\begin{DoxyCompactList}\small\item\em Creates a new reservation for a specific user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reservation\+Im} & The input model containing reservation details.\\
+\hline
+{\em user\+Id} & The unique identifier of the user.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result contains the created reservation view model.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the service for managing reservations, implementing IReservation\+Service. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_b_a_1_1_service_1_1_realizations_1_1_reservation_service_aaeaf9b1d0332d47abb51df4851f2eeaa}\label{class_b_a_1_1_service_1_1_realizations_1_1_reservation_service_aaeaf9b1d0332d47abb51df4851f2eeaa} 
+\index{BA.Service.Realizations.ReservationService@{BA.Service.Realizations.ReservationService}!ReservationService@{ReservationService}}
+\index{ReservationService@{ReservationService}!BA.Service.Realizations.ReservationService@{BA.Service.Realizations.ReservationService}}
+\doxysubsubsection{\texorpdfstring{ReservationService()}{ReservationService()}}
+{\footnotesize\ttfamily BA.\+Service.\+Realizations.\+Reservation\+Service.\+Reservation\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_a_1_1_data_1_1_data_1_1_application_db_context}{Application\+Db\+Context}}}]{context,  }\item[{User\+Manager$<$ \mbox{\hyperlink{class_b_a_1_1_data_1_1_models_1_1_user}{User}} $>$}]{user\+Manager,  }\item[{IMapper}]{mapper }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the Reservation\+Service class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The database context.\\
+\hline
+{\em user\+Manager} & The user manager for handling user operations.\\
+\hline
+{\em mapper} & The Auto\+Mapper instance for mapping objects.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_a_1_1_service_1_1_realizations_1_1_reservation_service_ac95c1e1d3a5ac3fc4d8fdbc075bb35ee}\label{class_b_a_1_1_service_1_1_realizations_1_1_reservation_service_ac95c1e1d3a5ac3fc4d8fdbc075bb35ee} 
+\index{BA.Service.Realizations.ReservationService@{BA.Service.Realizations.ReservationService}!CreateReservationAsync@{CreateReservationAsync}}
+\index{CreateReservationAsync@{CreateReservationAsync}!BA.Service.Realizations.ReservationService@{BA.Service.Realizations.ReservationService}}
+\doxysubsubsection{\texorpdfstring{CreateReservationAsync()}{CreateReservationAsync()}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_reservation_1_1_reservation_v_m}{Reservation\+VM}} $>$ BA.\+Service.\+Realizations.\+Reservation\+Service.\+Create\+Reservation\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_reservation_1_1_reservation_i_m}{Reservation\+IM}}}]{reservation\+Im,  }\item[{string}]{user\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new reservation for a specific user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reservation\+Im} & The input model containing reservation details.\\
+\hline
+{\em user\+Id} & The unique identifier of the user.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result contains the created reservation view model.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_b_a_1_1_service_1_1_abstractions_1_1_i_reservation_service_a0c48f5615ec4cddecb3de11a46f2d6b2}{BA.\+Service.\+Abstractions.\+IReservation\+Service}}.
+
+\Hypertarget{class_b_a_1_1_service_1_1_realizations_1_1_reservation_service_a5d43f782215f1fe413291d8c1b72d5ae}\label{class_b_a_1_1_service_1_1_realizations_1_1_reservation_service_a5d43f782215f1fe413291d8c1b72d5ae} 
+\index{BA.Service.Realizations.ReservationService@{BA.Service.Realizations.ReservationService}!GetAllReservationsAsync@{GetAllReservationsAsync}}
+\index{GetAllReservationsAsync@{GetAllReservationsAsync}!BA.Service.Realizations.ReservationService@{BA.Service.Realizations.ReservationService}}
+\doxysubsubsection{\texorpdfstring{GetAllReservationsAsync()}{GetAllReservationsAsync()}}
+{\footnotesize\ttfamily async Task$<$ IEnumerable$<$ \mbox{\hyperlink{class_b_a_1_1_common_1_1_models_1_1_reservation_1_1_reservation_v_m}{Reservation\+VM}} $>$ $>$ BA.\+Service.\+Realizations.\+Reservation\+Service.\+Get\+All\+Reservations\+Async (\begin{DoxyParamCaption}\item[{string}]{user\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves all reservations for a specific user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & The unique identifier of the user.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result contains a collection of reservation view models.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_b_a_1_1_service_1_1_abstractions_1_1_i_reservation_service_a34518c8aba7851b45622a0ba43b428bd}{BA.\+Service.\+Abstractions.\+IReservation\+Service}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Barber\+App/\+BA.\+Service/\+Realizations/Reservation\+Service.\+cs\end{DoxyCompactItemize}
