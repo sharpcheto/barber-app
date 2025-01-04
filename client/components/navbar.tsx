@@ -120,7 +120,7 @@ function Navbar() {
 				</ul>
 			</nav>
 
-			<nav className="block xl:hidden fixed top-0 w-full z-[50] bg-transparent text-black ">
+			<nav className="block xl:hidden fixed top-0 w-full z-[50] bg-transparent text-black backdrop-filter bg-opacity-50 backdrop-blur-xl ">
 				{/* AuthGuard manages login state */}
 				<AuthGuard onAuthChange={setIsLogged} />
 
@@ -161,7 +161,7 @@ function Navbar() {
 
 				{/* Mobile Menu */}
 				<div
-					className={`fixed top-0 left-0 h-screen w-full bg-white z-[10] transform backdrop-filter bg-opacity-50 backdrop-blur-xl transition-transform duration-300 ease-in-out ${
+					className={`fixed top-0 left-0 h-[150vh] w-full bg-white z-[10] transform backdrop-filter bg-opacity-50 backdrop-blur-xl transition-transform duration-300 ease-in-out ${
 						isMenuOpen ? "translate-x-0" : "-translate-x-full"
 					}`}
 				>
@@ -169,7 +169,7 @@ function Navbar() {
 						<li>
 							<Link
 								href="/#services"
-								className="font-bold font-cabinet text-9xl"
+								className="font-bold font-cabinet text-5xl"
 								onClick={() => setIsMenuOpen(false)}
 							>
 								Services
@@ -178,7 +178,7 @@ function Navbar() {
 						<li>
 							<Link
 								href="/#about"
-								className="font-bold font-cabinet text-9xl"
+								className="font-bold font-cabinet text-5xl"
 								onClick={() => setIsMenuOpen(false)}
 							>
 								About Us
@@ -189,7 +189,7 @@ function Navbar() {
 							<>
 								<li>
 									<button
-										className="font-bold font-cabinet text-9xl"
+										className="font-bold font-cabinet text-5xl"
 										onClick={() => {
 											toggleDropdown();
 											setIsMenuOpen(false);
@@ -210,7 +210,7 @@ function Navbar() {
 						) : (
 							<li>
 								<Link href="/login" onClick={() => setIsMenuOpen(false)}>
-									<p className="font-bold font-cabinet text-7xl bg-gray-200 px-20 py-10 rounded-lg">
+									<p className="font-bold font-cabinet text-3xl bg-gray-200 px-6 py-5 rounded-lg">
 										Log In
 									</p>
 								</Link>
@@ -221,7 +221,7 @@ function Navbar() {
 								href={storageService.retrieveAccessToken() ? "/book" : "/login"}
 								onClick={() => setIsMenuOpen(false)}
 							>
-								<p className="font-bold font-cabinet text-7xl bg-bordo text-white px-20 py-10 rounded-lg">
+								<p className="font-bold font-cabinet text-3xl bg-bordo text-white px-6 py-5 rounded-lg">
 									Book Now
 								</p>
 							</Link>

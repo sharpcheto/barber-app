@@ -138,8 +138,8 @@ function Book() {
 	return (
 		<>
 			<Navbar />
-			<main className="w-screen relative h-screen grid place-items-center">
-				<h1 className="absolute z-20 left-[10%] top-[15%] font-cabinet font-bold text-bordo text-7xl">
+			<main className="w-screen relative h-screen grid place-items-center xl:">
+				<h1 className="absolute z-20 left-[10%] sm:top-[15%] top-[20%] font-cabinet font-bold text-bordo text-2xl md:text-7xl">
 					<Link
 						className="nav-link relative"
 						onClick={handleBackToService}
@@ -159,16 +159,16 @@ function Book() {
 				</h1>
 				<section
 					className={`${
-						isServiceSelected ? `overflow-hidden` : `overflow-auto`
+						isServiceSelected ? `overflow-scroll` : `overflow-auto`
 					} w-[80%] relative h-[50%] shadow-xl bg-white border-bordo border-4 rounded-xl`}
 				>
 					<div
-						className={isServiceSelected ? `py-0 px-0 appoint` : `py-5 px-10`}
+						className={isServiceSelected ? `py-0 px-0 appoint after:w-[100%] sm:after:w-[50%] after:h-[50%] sm:after:h-[120%]` : `py-5 px-10`}
 					>
 						{isServiceSelected ? (
-							<div className="w-full h-full grid grid-cols-2 place-items-center place-content-center font-cabinet">
+							<div className="w-full h-full grid grid-rows-2 sm:grid-cols-2 place-items-center place-content-center font-cabinet">
 								{/* Calendar and Time Picker */}
-								<div className="flex justify-center flex-col mt-6 w-full h-full z-50 translate-x-1/4">
+								<div className="flex justify-center flex-col mt-6 w-full h-full z-20 translate-x-12 translate-y-20 md:translate-y-20 md:translate-x-10 scale-[70%] md:scale-100">
 									{/* Date Picker on the left */}
 									<div className="w-1/2">
 										<h3 className="font-semibold text-xl text-bordo">
@@ -202,7 +202,7 @@ function Book() {
 								</div>
 
 								{/* Summary of the selected date and time on the right */}
-								<div className="p-4 bg-white h-full flex justify-center items-start flex-col w-full">
+								<div className="p-4 bg-white h-full flex justify-center scale-50 -translate-y-10 sm:translate-y-0 md:scale-100 items-start sm:flex-col w-full pb-10">
 									<span className="font-cabinet w-full h-full">
 										<h3 className="font-semibold text-xl text-center text-bordo">
 											Your appointment
@@ -231,13 +231,13 @@ function Book() {
 											Hour: {selectedTime}
 										</p>
 
-										<p className="mt-2 font-cabinet absolute right-5 bottom-[22%] 2xl:bottom-[27%] text-bordo text-xl">
+										<p className="mt-2 font-cabinet  translate-x-[70%] sm:translate-x-[60%] -translate-y-[4.3rem] text-bordo text-xl">
 											Phone: {currentUser?.phoneNumber}
 										</p>
-										<p className="mt-1 font-cabinet absolute right-5 bottom-[15%] 2xl:bottom-[21%] text-bordo text-xl">
+										<p className="mt-1 font-cabinet  translate-x-[70%] sm:translate-x-[60%] -translate-y-[4.3rem] text-bordo text-xl">
 											Full name: {currentUser?.firstName} {currentUser?.lastName}
 										</p>
-										<p className="mt-1 font-cabinet absolute right-5 bottom-[8%] 2xl:bottom-[15%] text-bordo text-xl">
+										<p className="mt-1 font-cabinet mb-5 translate-x-[70%] sm:translate-x-[60%] -translate-y-[4.3rem] text-bordo text-xl">
 											Email: {currentUser?.email}
 										</p>
 									</span>
@@ -282,7 +282,7 @@ function Book() {
 						isServiceSelected ? handleSubmit() : setIsServiceSelected("When?");
 					}}
 					disabled={isDisabled}
-					className={`font-cabinet text-2xl font-bold px-5 py-3 rounded-xl absolute top-[80%] left-[85.5%] 
+					className={`font-cabinet text-xl md:text-2xl font-bold px-5 py-3 rounded-xl absolute  left-[60.5%] top-[80%] xl:left-[85.5%] 
 					${
 						isDisabled
 							? "bg-gray-400 text-[#F8F9FA] cursor-not-allowed"

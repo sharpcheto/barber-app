@@ -122,13 +122,18 @@ input[type="checkbox"]:not(:checked) + .custom-checkbox {
 .service-item:hover {
   border-color: #AD3520;
 }
-
+@media (max-width: 768px) {
+  .appoint::after{
+    width: 100%;
+    height: 50%;
+  }
+}
 .appoint::after{
   content: '';
   position: absolute;
   top: 0;
   width: 50%;
-  height: 100%;
+  height: 120%;
   z-index: 0;
   background-color:#FAF5F1;
   left: 0;
