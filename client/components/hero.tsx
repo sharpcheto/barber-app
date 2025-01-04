@@ -70,7 +70,7 @@ function Hero() {
               individuality.
             </p>
             <Link
-              href={storageService.retrieveAccessToken() ? "/book" : "/book"}
+              href={storageService.retrieveAccessToken() ? "/book" : "/login"}
             >
               <button className="xl:scale-[80%] 2xl:scale-100 bg-bordo transition-all rounded-md font-bold xl:-ml-3 xl:mt-4 2xl:mt-10 px-10 py-2 text-white font-cabinet text-xl hover:bg-bordo/90">
                 Book Now
