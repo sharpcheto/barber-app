@@ -12,6 +12,7 @@ namespace BA.Application.Controllers;
 /// </summary>
 [Route("[controller]")]
 [ApiController]
+[Authorize]
 public class UserController : ControllerBase
 {
     private readonly IUserService userService;
@@ -45,7 +46,6 @@ public class UserController : ControllerBase
     /// </summary>
     /// <returns>The view model of the current user or a 404 response if the user is not found.</returns>
     [HttpGet("current")]
-    [Authorize]
     public async Task<ActionResult<UserVM?>> GetUserMeAsync()
     {
         var result = await this.userService.GetUserByIdAsync(this.currentUser.UserId);
