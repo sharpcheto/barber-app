@@ -68,15 +68,15 @@ function Login() {
 	  
 
 	return (
-		<main className="w-screen h-screen bg-[#FAF5F1]">
-			<section className="w-full h-full grid grid-cols-2">
-				<div className="w-full h-full flex justify-center items-center">
-					<form onSubmit={handleSubmit} className="space-y-6 scale-125">
-						<h2 className="text-2xl font-bold text-center font-cabinet text-bordo">
+		<main className="w-screen min-h-screen bg-[#FAF5F1]">
+			<section className="w-full min-h-screen grid grid-cols-1 lg:grid-cols-2">
+				<div className="w-full h-full flex justify-center items-center p-4 sm:p-6 lg:p-8 order-2 lg:order-1">
+					<form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 w-full max-w-md lg:scale-125">
+						<h2 className="text-xl sm:text-2xl font-bold text-center font-cabinet text-bordo">
 							Login
 						</h2>
 
-						<div className="space-y-2 w-[120%] -translate-x-5">
+						<div className="space-y-2 w-full">
 							<label
 								htmlFor="email"
 								className="block text-sm text-bordo font-cabinet font-bold"
@@ -93,7 +93,7 @@ function Login() {
 							/>
 						</div>
 
-						<div className="space-y-2 w-[120%] -translate-x-5">
+						<div className="space-y-2 w-full">
 							<label
 								htmlFor="password"
 								className="block text-sm text-bordo font-cabinet font-bold"
@@ -110,7 +110,7 @@ function Login() {
 							/>
 						</div>
 
-						<div className="flex items-center justify-between w-[120%] -translate-x-5">
+						<div className="flex items-center justify-between w-full">
 							<button
 								type="submit"
 								className="w-full py-2 bg-bordo text-white font-semibold rounded-lg hover:bg-bordo/90 transition-all font-cabinet"
@@ -138,8 +138,10 @@ function Login() {
 						</div>
 					</form>
 				</div>
-				<div className="absolute w-1/2 bg-black opacity-30 h-screen left-1/2"></div>
-				<img className="h-screen" src="login.png" alt="" />
+				<div className="relative w-full h-64 sm:h-80 lg:h-screen order-1 lg:order-2">
+					<div className="absolute inset-0 bg-black opacity-30 z-10"></div>
+					<img className="w-full h-full object-cover" src="login.png" alt="" />
+				</div>
 			</section>
 		</main>
 	);
