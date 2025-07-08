@@ -53,14 +53,14 @@ function Hero() {
               Your Pursuit of{" "}
               <span
                 ref={textPerfectRef}
-                className="translate-y-1 lg:translate-y-4 2xl:translate-y-6 overflow-hidden text-bordo inline-block rounded-xl backdrop-blur-xl backdrop-filter bg-opacity-10"
+                className="translate-y-1 lg:translate-y-4 2xl:translate-y-6 overflow-hidden text-bordo inline-block rounded-xl backdrop-blur-xl backdrop-filter bg-white/20 border border-bordo/20 px-2 py-1"
               >
                 Perfection
               </span>{" "}
               <br /> Our Work of{" "}
               <span
                 ref={textExRef}
-                className="overflow-hidden translate-y-1 lg:translate-y-5 2xl:translate-y-8 text-bordo inline-block mb-1 rounded-xl backdrop-blur-xl backdrop-filter bg-opacity-10"
+                className="overflow-hidden translate-y-1 lg:translate-y-5 2xl:translate-y-8 text-bordo inline-block mb-1 rounded-xl backdrop-blur-xl backdrop-filter bg-white/20 border border-bordo/20 px-2 py-1"
               >
                 Excellence
               </span>
