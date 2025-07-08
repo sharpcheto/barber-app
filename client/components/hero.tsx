@@ -44,12 +44,12 @@ function Hero() {
   }, []);
 		return (
       <section className="relative grid grid-cols-1 lg:grid-cols-2 w-screen min-h-screen">
-        <div className="w-full z-20 bg-white text-black p-4 sm:p-6 lg:p-6 grid place-content-center place-items-start order-2 lg:order-1">
-          <span className="lg:translate-x-[20%] -translate-y-0 w-full">
+        <div className="w-full z-20 bg-white text-black p-4 sm:p-6 lg:p-6 grid place-content-center place-items-start order-2 lg:order-1 relative overflow-visible">
+          <span className="lg:translate-x-[20%] -translate-y-0 w-full lg:w-[120%] relative z-30">
             <p className="font-cabinet text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-5xl font-bold mb-2 sm:mb-4 xl:mb-0 2xl:mb-4 text-bordo">
               Your ultimate barber shop
             </p>
-            <h1 className="font-cabinet text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl font-bold mb-4 lg:mb-4 2xl:mb-6 leading-tight lg:leading-none">
+            <h1 className="font-cabinet text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl font-bold mb-4 lg:mb-4 2xl:mb-6 leading-tight lg:leading-none relative z-30">
               Your Pursuit of{" "}
               <span
                 ref={textPerfectRef}
@@ -57,7 +57,7 @@ function Hero() {
               >
                 Perfection
               </span>{" "}
-              <br /> Our Work of{" "}
+              Our Work of{" "}
               <span
                 ref={textExRef}
                 className="overflow-hidden translate-y-1 lg:translate-y-5 2xl:translate-y-8 text-bordo inline-block mb-1 rounded-xl backdrop-blur-xl backdrop-filter bg-white/20 border border-bordo/20 px-2 py-1"
