@@ -49,18 +49,18 @@ function Hero() {
             <p className="font-cabinet text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-5xl font-bold mb-2 sm:mb-4 xl:mb-0 2xl:mb-4 text-bordo">
               Your ultimate barber shop
             </p>
-            <h1 className="font-cabinet text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl font-bold mb-4 lg:mb-4 2xl:mb-6 leading-tight lg:leading-none relative z-30">
+            <h1 className="font-cabinet text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl font-bold mb-4 lg:mb-4 2xl:mb-6 leading-tight lg:leading-none relative z-30">
               Your Pursuit of{" "}
               <span
                 ref={textPerfectRef}
-                className="translate-y-1 lg:translate-y-4 2xl:translate-y-6 overflow-hidden text-bordo inline-block rounded-xl backdrop-blur-xl backdrop-filter bg-white/20 border border-bordo/20 px-2 py-1"
+                className="translate-y-0 lg:translate-y-4 2xl:translate-y-6 overflow-hidden text-bordo inline-block rounded-xl backdrop-blur-xl backdrop-filter bg-white/30 px-3 py-1 lg:px-4 lg:py-2"
               >
                 Perfection
               </span>{" "}
               Our Work of{" "}
               <span
                 ref={textExRef}
-                className="overflow-hidden translate-y-1 lg:translate-y-5 2xl:translate-y-8 text-bordo inline-block mb-1 rounded-xl backdrop-blur-xl backdrop-filter bg-white/20 border border-bordo/20 px-2 py-1"
+                className="overflow-hidden translate-y-0 lg:translate-y-5 2xl:translate-y-8 text-bordo inline-block mb-1 rounded-xl backdrop-blur-xl backdrop-filter bg-white/30 px-3 py-1 lg:px-4 lg:py-2"
               >
                 Excellence
               </span>
